@@ -1,37 +1,28 @@
 body {
-    margin: 0;
+    background-color: #111;
+    color: #eee;
     font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
-    color: #f0f0f0;
+    margin: 0;
 }
 header {
-    background-color: #111;
+    background-color: #222;
     padding: 20px;
     text-align: center;
 }
-header h1 {
-    margin: 0;
-}
 nav a {
-    margin: 0 15px;
-    color: #ddd;
+    margin: 0 10px;
+    color: #ccc;
     text-decoration: none;
 }
 main {
     padding: 20px;
 }
-section {
-    margin-bottom: 40px;
+video {
+    width: 100%;
+    max-height: 500px;
+    background-color: #000;
 }
-iframe {
-    border-radius: 10px;
-}
-input[type="file"] {
-    margin: 10px 0;
-}
-#videoPreview video, #imageGallery img {
-    max-width: 100%;
+input, button {
     margin-top: 10px;
-    border: 2px solid #333;
-    border-radius: 10px;
+    padding: 10px;
 }

@@ -2,41 +2,52 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Live Conqueror's Blade</title>
+    <title>Conqueror's Blade - LIVE</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>Live Conqueror's Blade</h1>
+        <h1>Conqueror's Blade - Diffusion en Direct</h1>
         <nav>
             <a href="#live">Live</a>
             <a href="#videos">Vidéos</a>
-            <a href="#galerie">Galerie</a>
+            <a href="#login">Connexion</a>
         </nav>
     </header>
 
     <main>
         <section id="live">
-            <h2>Regarder le Live</h2>
-            <iframe width="100%" height="500" src="https://www.youtube.com/embed/live_stream?channel=UCXXXXXXXXX" 
-                    title="Live Conqueror's Blade" frameborder="0" allowfullscreen></iframe>
+            <h2>LIVE</h2>
+            <video id="liveVideo" controls autoplay muted>
+                <source src="http://localhost/live/stream.flv" type="video/x-flv">
+                Votre navigateur ne supporte pas la lecture du stream en direct.
+            </video>
+            <p>Configure OBS pour diffuser vers : <code>rtmp://[TON_DOMAINE]/live</code> avec le nom de stream <code>stream</code></p>
         </section>
 
         <section id="videos">
-            <h2>Upload de Vidéos</h2>
-            <input type="file" id="videoUpload" accept="video/*">
-            <div id="videoPreview"></div>
+            <h2>Vidéos Uploadées</h2>
+            <div id="videoList"></div>
         </section>
 
-        <section id="galerie">
-            <h2>Galerie d'Images</h2>
-            <input type="file" id="imageUpload" accept="image/*">
-            <div id="imageGallery"></div>
+        <section id="uploadSection" style="display: none;">
+            <h2>Uploader une vidéo</h2>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="videoFile" accept="video/*" required>
+                <button type="submit">Uploader</button>
+            </form>
+        </section>
+
+        <section id="login">
+            <h2>Connexion</h2>
+            <input type="password" id="adminPass" placeholder="Mot de passe admin">
+            <button onclick="login()">Se connecter</button>
+            <p id="loginMsg"></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 - Conqueror's Blade Fan Site</p>
+        <p>&copy; 2025 Conqueror's Blade FanSite</p>
     </footer>
 
     <script src="js/scripts.js"></script>
