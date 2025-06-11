@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Conqueror's Blade</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Live Conqueror's Blade</h1>
+        <nav>
+            <a href="#live">Live</a>
+            <a href="#videos">Vidéos</a>
+            <a href="#galerie">Galerie</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="live">
+            <h2>Regarder le Live</h2>
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/live_stream?channel=UCXXXXXXXXX" 
+                    title="Live Conqueror's Blade" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section id="videos">
+            <h2>Upload de Vidéos</h2>
+            <input type="file" id="videoUpload" accept="video/*">
+            <div id="videoPreview"></div>
+        </section>
+
+        <section id="galerie">
+            <h2>Galerie d'Images</h2>
+            <input type="file" id="imageUpload" accept="image/*">
+            <div id="imageGallery"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Conqueror's Blade Fan Site</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
